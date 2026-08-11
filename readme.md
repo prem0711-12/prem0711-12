@@ -1,15 +1,52 @@
-### Hi, I'm Prem 👋
+Hi, I'm Prem 👋
 
-Team Leader, Technical Support — leading a 22-person support organization
-(5 Technical Support Engineers, 6 Shift Leaders, 11 Operators) on a
-high-availability SaaS platform serving US-facing clients.
+Technical / Application Support Engineer
+Production Support • Incident Investigation • SQL • Automation • AI-assisted Solutions
 
-3+ years across GCP, MySQL, Firebase, Cassandra, and Postman — investigating
-and documenting real production incidents, with no formal customer ticketing
-system to lean on.
+I work on production-facing technical support for SaaS systems, investigating incidents,
+analysing logs and databases, troubleshooting integrations, and working with engineering
+teams to resolve customer-impacting issues.
 
-🔍 **Case studies:**
-- [Production Support Case Studies](https://github.com/prem0711-12/production-support-case-studies) — payment callback failure & post-migration access issue, full RCA
-- [SQL Support Case Studies](https://github.com/prem0711-12/sql-support-case-studies) — 6 SQL investigations modelled on real support scenarios
+I'm also interested in improving repetitive support workflows through automation and
+AI-assisted tooling.
 
-📫 [LinkedIn](https://linkedin.com/in/premrathodtech) · premrathod1416@gmail.com
+What I work with
+────────────────
+• Production & Application Support
+• Incident investigation & RCA
+• SQL / MySQL
+• GCP & log analysis
+• API troubleshooting
+• Slack / support workflow automation
+• AI-assisted development
+
+Selected projects
+────────────────
+🚀 Slack Support Assistant
+AI-assisted Slack workflow for support teams...
+
+🔎 Production Support Case Studies
+Realistic incident investigation and RCA scenarios...
+
+🗄️ SQL Support Case Studies
+SQL investigations based on real-world support scenarios...
+
+📊 SQL Training Dashboard
+...
+
+🎯 Job Search Tracker
+...
+
+Currently learning
+────────────────
+• Application Support / L2 troubleshooting
+• Cloud & automation concepts
+• AI-assisted development workflows
+
+Open to
+────────
+L2 Application Support
+Application Support Engineer
+Technical Support Engineer
+Production Support
+Technical Operations
