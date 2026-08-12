@@ -1,4 +1,3 @@
-<img width="1000" height="563" alt="slack-support-assistant-demo" src="https://github.com/user-attachments/assets/b2749e1d-4df8-4d10-b484-1781dc4a5fc9" />
 <h1 align="center">Hi, I'm Prem 👋</h1>
 <h3 align="center">Technical / Application Support Engineer</h3>
 <p align="center">Production Support · Incident Investigation · Root Cause Analysis · SQL · Automation · AI-Assisted Tooling</p>
@@ -100,7 +99,7 @@ flowchart TD
 
 **Demo**
 
-<img width="1000" height="563" alt="slack-support-assistant-demo" src="https://github.com/user-attachments/assets/205679d7-a5ff-4158-bb83-be09806d3278" />
+![Slack Support Assistant demo — new conversation, availability check, AI-suggested reply, and approve & send](assets/slack-support-assistant-demo.gif)
 
 *Screen recording of the prototype: a new conversation comes in, availability is checked, an AI-suggested reply is generated, and the engineer approves and sends it.*
 
