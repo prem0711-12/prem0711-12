@@ -16,7 +16,7 @@ My day-to-day involves understanding what happened in production, identifying th
 
 ---
 
-## What I Do
+## 🧭 What I Do
 
 **Production & Application Support**
 Incident investigation and troubleshooting · Root Cause Analysis (RCA) · Production issue monitoring · Customer-impacting issue investigation · Incident documentation · Engineering escalation and coordination
@@ -29,7 +29,7 @@ Support workflow automation · AI-assisted investigation and documentation · Wo
 
 ---
 
-## How I Approach Production Problems
+## 🧩 How I Approach Production Problems
 
 ```mermaid
 flowchart TD
@@ -46,7 +46,7 @@ This is the same structured thinking behind every project below — each one sta
 
 ---
 
-## The Story Behind My Projects
+## 🗺️ The Story Behind My Projects
 
 ```mermaid
 flowchart LR
@@ -61,17 +61,20 @@ I don't build software for its own sake. Each project below started with somethi
 
 ---
 
-## Featured Project
+## 🔒 Featured Project
 
-### 🔒 Slack Support Assistant — AI-Assisted Support Workflow Prototype
+### Slack Support Assistant — AI-Assisted Support Workflow Prototype
 
-`[PRIVATE PROJECT]` **Status:** Private prototype — not in production
+<p>
+  <img src="https://img.shields.io/badge/Repository-Private-2d3748?style=flat-square&labelColor=1a202c&color=64748b" alt="Repository: Private"/>
+  <img src="https://img.shields.io/badge/Status-Prototype%20%2F%20Experimental-2d3748?style=flat-square&labelColor=1a202c&color=0d9488" alt="Status: Prototype / Experimental"/>
+  <img src="https://img.shields.io/badge/Production%20Use-No-2d3748?style=flat-square&labelColor=1a202c&color=475569" alt="Production Use: No"/>
+</p>
 
-**Problem**
-Support teams handling incoming Slack conversations often assign requests manually, with no consistent check on who's actually available before a conversation lands on their queue.
-
-**Approach**
-Prototype a workflow where new Slack conversations are detected automatically, routed to an available engineer using round-robin logic, and tracked through acknowledgement and response — with AI assisting the engineer's response drafting, not replacing their judgment.
+| | |
+|---|---|
+| **Problem** | Support teams handling incoming Slack conversations often assign requests manually, with no consistent check on who's actually available before a conversation lands on their queue. |
+| **Approach** | Prototype a workflow where new Slack conversations are detected automatically, routed to an available engineer using round-robin logic, and tracked through acknowledgement and response — with AI assisting the engineer's response drafting, not replacing their judgment. |
 
 **Workflow**
 
@@ -93,6 +96,12 @@ flowchart TD
 - Excluding engineers from assignment based on real-time Slack presence, not just a static schedule
 - Keeping AI in a drafting/assist role — every response is reviewed and approved by the engineer before sending, never auto-sent
 - Tracking conversation and acknowledgement state through the full lifecycle, not just at creation
+
+**Demo**
+
+![Slack Support Assistant demo — new conversation, availability check, AI-suggested reply, and approve & send](assets/slack-support-assistant-demo.gif)
+
+*Screen recording of the prototype: a new conversation comes in, availability is checked, an AI-suggested reply is generated, and the engineer approves and sends it.*
 
 **Example system output**
 
@@ -123,7 +132,7 @@ Building this clarified how much of "support automation" is really about designi
 
 ---
 
-## Other Projects
+## 🗂️ Other Projects
 
 <table>
 <tr>
@@ -134,7 +143,7 @@ Building this clarified how much of "support automation" is really about designi
 *Approach:* Documented incident investigations covering RCA, SQL investigation, log analysis, and API troubleshooting, written up the way I'd document a real ticket.
 *What I learned:* Structuring the investigation trail matters as much as finding the root cause — a finding nobody can follow isn't useful yet.
 
-**Repository:** Public
+![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
 
 </td>
 <td width="50%" valign="top">
@@ -144,7 +153,7 @@ Building this clarified how much of "support automation" is really about designi
 *Approach:* SQL investigation scenarios modelled on real support situations — joins, filtering/aggregation, transaction analysis, log/data correlation.
 *What I learned:* Most "SQL skill" in support work is really about knowing which question to ask the data first.
 
-**Repository:** Public
+![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
 
 </td>
 </tr>
@@ -156,7 +165,7 @@ Building this clarified how much of "support automation" is really about designi
 *Approach:* Small project to structure SQL practice and surface results in a usable format.
 *What I learned:* Presenting a query's output well is part of the job, not an afterthought.
 
-**Repository:** Public
+![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
 
 </td>
 <td width="50%" valign="top">
@@ -166,7 +175,7 @@ Building this clarified how much of "support automation" is really about designi
 *Approach:* Tracking system for target companies, applications, roles, ATS coverage, status, and follow-ups.
 *What I learned:* Treating a job search like an incident queue — status, ownership, follow-up — actually keeps it manageable.
 
-**Repository:** Public
+![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
 
 </td>
 </tr>
@@ -174,13 +183,13 @@ Building this clarified how much of "support automation" is really about designi
 
 ---
 
-## Current Learning / Career Direction
+## 📈 Current Learning / Career Direction
 
 I'm focused on moving into L2 Application Support / Production Support roles, particularly with European and German companies — deepening my incident investigation, RCA, and SQL work while continuing to explore how AI-assisted tooling can practically support (not replace) technical support teams.
 
 ---
 
-## Contact
+## ✉️ Contact
 
 📧 [premrathod1416@gmail.com](mailto:premrathod1416@gmail.com)
 💼 [linkedin.com/in/premrathodtech](https://linkedin.com/in/premrathodtech)
