@@ -193,3 +193,4 @@ I'm focused on moving into L2 Application Support / Production Support roles, pa
 
 📧 [premrathod1416@gmail.com](mailto:premrathod1416@gmail.com)
 💼 [linkedin.com/in/premrathodtech](https://linkedin.com/in/premrathodtech)
+🔗 [Portfolio — Prem Rathod](https://prem-rathod-portfolio.pages.dev/)
