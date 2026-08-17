@@ -57,16 +57,58 @@ flowchart LR
     E --> F[Lessons<br/>Learned]
 ```
 
-I don't build software for its own sake. Each project below started with something I noticed in support work — a repetitive task, a slow handoff, an assignment process that could be more consistent — and I used AI-assisted development to turn that observation into a working prototype: I define the problem, workflow, logic, and testing direction; AI assists with implementation.
+I don't build software for its own sake. Each project below started with something I noticed in support work — a repetitive task, a slow handoff, a manual monitoring process that could be more consistent — and I used AI-assisted development to turn that observation into a working prototype: I define the problem, workflow, logic, and testing direction; AI assists with implementation.
 
 ---
 
-## 🔒 Featured Project
+## 🗃️ Featured Projects — Index
 
-### Slack Support Assistant — AI-Assisted Support Workflow Prototype
+The section below is a control panel, not a full write-up. Each entry is the high-level signal; the implementation, tests, and design decisions live in the repository itself.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**01 — SLACK SUPPORT ASSISTANT**
+`AI-ASSISTED SUPPORT WORKFLOW`
+
+Round-robin conversation assignment, live availability checks, and AI-drafted replies for support engineers on Slack — the engineer always sends, the bot only assists.
 
 <p>
-  <img src="https://img.shields.io/badge/Repository-Private-2d3748?style=flat-square&labelColor=1a202c&color=64748b" alt="Repository: Private"/>
+<img src="https://img.shields.io/badge/Status-Prototype-2d3748?style=flat-square&labelColor=1a202c&color=0d9488" alt="Status: Prototype"/>
+<img src="https://img.shields.io/badge/Stack-Python%20%2F%20Slack%20Bolt-2d3748?style=flat-square&labelColor=1a202c&color=475569" alt="Stack: Python / Slack Bolt"/>
+</p>
+
+[Repository →](https://github.com/prem0711-12/slack-support-assistant) · [Project Details →](#project-01-slack-support-assistant)
+
+</td>
+<td width="50%" valign="top">
+
+**02 — EQUIBASE RACE-DAY CHANGE INFORMER**
+`OPERATIONAL CHANGE DETECTION`
+
+Polls Equibase race-day data, detects operational changes (scratches, jockey swaps, track condition), filters out noise, and pushes grouped alerts to Slack.
+
+<p>
+<img src="https://img.shields.io/badge/Status-Active%20Development-2d3748?style=flat-square&labelColor=1a202c&color=0d9488" alt="Status: Active Development"/>
+<img src="https://img.shields.io/badge/Stack-Python%20%2F%20XML%20%2F%20Slack-2d3748?style=flat-square&labelColor=1a202c&color=475569" alt="Stack: Python / XML / Slack"/>
+</p>
+
+[Repository →](https://github.com/prem0711-12/equibase-race-day-change-informer) · [Project Details →](#project-02-equibase-race-day-change-informer)
+
+</td>
+</tr>
+</table>
+
+*More projects get added to this index the same way — number, one-liner, status, and links. No redesign required.*
+
+---
+
+<a id="project-01-slack-support-assistant"></a>
+## 🔒 Project 01 — Slack Support Assistant — AI-Assisted Support Workflow Prototype
+
+<p>
+  <img src="https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488" alt="Repository: Public"/>
   <img src="https://img.shields.io/badge/Status-Prototype%20%2F%20Experimental-2d3748?style=flat-square&labelColor=1a202c&color=0d9488" alt="Status: Prototype / Experimental"/>
   <img src="https://img.shields.io/badge/Production%20Use-No-2d3748?style=flat-square&labelColor=1a202c&color=475569" alt="Production Use: No"/>
 </p>
@@ -127,8 +169,71 @@ Status: ACKNOWLEDGED
 **What I learned**
 Building this clarified how much of "support automation" is really about designing the *decision logic* — who's eligible, when to escalate, when to hand control back to a human — rather than the AI generation step itself, which is the easy part.
 
-**Repository:** Private — implementation available on request
+**Repository:** [github.com/prem0711-12/slack-support-assistant](https://github.com/prem0711-12/slack-support-assistant) — full architecture, milestone history, and test coverage documented there.
 **Focus:** Support workflow design · Automation · Slack workflows · AI-assisted tooling
+
+[↑ Back to Featured Projects index](#-featured-projects--index)
+
+---
+
+<a id="project-02-equibase-race-day-change-informer"></a>
+## 🛰️ Project 02 — Equibase Race-Day Change Informer — Operational Change Detection Pipeline
+
+<p>
+  <img src="https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488" alt="Repository: Public"/>
+  <img src="https://img.shields.io/badge/Status-Active%20Development-2d3748?style=flat-square&labelColor=1a202c&color=0d9488" alt="Status: Active Development"/>
+  <img src="https://img.shields.io/badge/Production%20Use-No-2d3748?style=flat-square&labelColor=1a202c&color=475569" alt="Production Use: No"/>
+</p>
+
+| | |
+|---|---|
+| **Problem** | Race-day data changes (scratches, jockey swaps, track condition) get published by Equibase continuously, but manually diffing raw XML snapshots to catch what actually matters operationally doesn't scale. |
+| **Approach** | An operational monitoring pipeline that polls Equibase on a schedule, detects real changes between snapshots, filters out routine noise, groups related records into single events, and delivers the result as a report and a Slack notification. |
+
+**Workflow**
+
+```mermaid
+flowchart TD
+    A[Equibase Data] --> B[XML Snapshot]
+    B --> C[Parse]
+    C --> D[Change Detection]
+    D --> E[Filter / Group]
+    E --> F[Operational Events]
+    F --> G[Report]
+    F --> H[Slack Notification]
+```
+
+**What it currently does**
+- Downloads and timestamps Equibase's race-day change XML on a repeating schedule
+- Parses raw XML into structured change records and classifies each as new, removed, modified, or unchanged against the previous snapshot
+- Filters detected changes down to the ones that are operationally relevant (scratches, jockey changes, track condition, course/distance changes, cancellations) and groups noisy per-race records into single events
+- Writes a human-readable + machine-readable report each cycle and sends the filtered, grouped events to Slack
+
+**Example run — 6 operational events detected**
+
+<details>
+<summary>Sanitized run output (click to expand)</summary>
+
+```text
+NEW OPERATIONAL EVENTS: 6
+
+SCRATCH                 — Emerald Downs
+JOCKEY CHANGE           — Prairie Meadows
+JOCKEY CHANGE           — Prairie Meadows
+JOCKEY CHANGE           — Prairie Meadows
+JOCKEY CHANGE           — Prairie Meadows
+TRACK CONDITION CHANGE  — Prairie Meadows
+```
+
+</details>
+
+**What's next**
+Comparing Equibase's reported changes against an internal company system to flag mismatches is a planned future direction — it is **not** implemented in the current pipeline, which stops at detection, filtering, reporting, and Slack notification.
+
+**Repository:** [github.com/prem0711-12/equibase-race-day-change-informer](https://github.com/prem0711-12/equibase-race-day-change-informer) — full phase-by-phase build log, data model, and test suite documented there.
+**Focus:** Operational monitoring · Change detection · Data pipelines · Slack notifications
+
+[↑ Back to Featured Projects index](#-featured-projects--index)
 
 ---
 
