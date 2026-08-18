@@ -243,6 +243,17 @@ Comparing Equibase's reported changes against an internal company system to flag
 <tr>
 <td width="50%" valign="top">
 
+**🌐 Prem Rathod — Portfolio**
+*Problem:* Needed a single place to present my technical projects, application-support experience, case studies, and career direction — beyond what a resume or a list of repos can show.
+*Approach:* Designed and built a personal portfolio website with a custom frontend — project-focused UI, animated interactions, responsive layouts, and dedicated case-study pages.
+*What I learned:* Presenting your own work clearly is a design problem in itself, not just a listing exercise.
+
+![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
+[Repository](https://github.com/prem0711-12/prem-rathod-portfolio) · [Live Site](https://prem-rathod-portfolio.pages.dev/)
+
+</td>
+<td width="50%" valign="top">
+
 **🔎 Production Support Case Studies**
 *Problem:* Practising realistic production-support scenarios end to end.
 *Approach:* Documented incident investigations covering RCA, SQL investigation, log analysis, and API troubleshooting, written up the way I'd document a real ticket.
@@ -251,6 +262,8 @@ Comparing Equibase's reported changes against an internal company system to flag
 ![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **🗄️ SQL Support Case Studies**
@@ -261,8 +274,6 @@ Comparing Equibase's reported changes against an internal company system to flag
 ![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **📊 SQL Training Dashboard**
@@ -273,6 +284,8 @@ Comparing Equibase's reported changes against an internal company system to flag
 ![Repository: Public](https://img.shields.io/badge/Repository-Public-2d3748?style=flat-square&labelColor=1a202c&color=0d9488)
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **🎯 Job Search Tracker**
